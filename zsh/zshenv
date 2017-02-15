@@ -17,4 +17,20 @@ export DOTZSH="$HOME/.zsh"
 source "$DOTZSH/env.zsh"
 
 # Customize to your needs...
+# Set the list of directories that Zsh searches for programs.
+path=(
+  $HOME/.rvm/bin # Add RVM to PATH for scripting
+  /opt/sublime_text_3
+  $HOME/.git-aliae/bin
+  $HOME/android/sdk/{tools,platform-tools}
+  $HOME/android/android-studio/bin
+  /usr/local/{bin,sbin}
+  $HOME/.local/bin
+  $path
+)
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/workspace
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 

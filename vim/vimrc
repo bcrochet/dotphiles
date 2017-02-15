@@ -25,4 +25,6 @@ if has("user_commands")
 endif
 
 " Customize to your needs...
+"Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-airline/vim-airline-themes'
 
