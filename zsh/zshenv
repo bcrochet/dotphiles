@@ -16,6 +16,8 @@ export DOTZSH="$HOME/.zsh"
 # Source environment settings
 source "$DOTZSH/env.zsh"
 
+export GOPATH=$HOME/go
+
 # Customize to your needs...
 # Set the list of directories that Zsh searches for programs.
 path=(
@@ -26,6 +28,7 @@ path=(
   $HOME/android/android-studio/bin
   /usr/local/{bin,sbin}
   $HOME/.local/bin
+  $GOPATH/bin
   $path
 )
 
@@ -33,4 +36,5 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/workspace
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3.5'
 

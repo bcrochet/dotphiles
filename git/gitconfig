@@ -150,5 +150,8 @@
 [url "git@github.com:"]
     insteadof = github:
 
+[url "git+ssh://brad-9@git.launchpad.net/"]
+    insteadof = lp:
+
 [credential]
     helper = /usr/libexec/git-core/git-credential-gnome-keyring

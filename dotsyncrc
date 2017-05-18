@@ -45,9 +45,9 @@ liquidprompt/liquidpromptrc
 #ncmpcpp/config
 #ncmpcpp/error.log
 #postgresql/psqlrc
-#python/pythonrc
-#python/pylintrc
-#rpm/rpmmacros
+python/pythonrc
+python/pylintrc
+rpm/rpmmacros
 #ruby/irbrc
 #ruby/pryrc
 #ruby/gemrc
@@ -58,7 +58,7 @@ liquidprompt/liquidpromptrc
 #screen/screenrc
 #shell/hushlogin
 #shell/urlview
-#ssh
+ssh
 #subversion
 #task/task
 #task/taskrc
