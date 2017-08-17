@@ -154,4 +154,4 @@
     insteadof = lp:
 
 [credential]
-    helper = /usr/libexec/git-core/git-credential-gnome-keyring
+	helper = /usr/libexec/git-core/git-credential-libsecret
