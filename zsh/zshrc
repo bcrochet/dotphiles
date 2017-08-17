@@ -27,6 +27,8 @@ zstyle ':dotzsh:load' dzmodule \
   'history' \
   'utility' \
   'completion' \
+  'ruby' \
+  'python' \
   'theme'
 
 ### Global settings
@@ -114,5 +116,3 @@ source "$DOTZSH/init.zsh"
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
