@@ -1,30 +1,220 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
-# Description:  Config for ssh client
-#
-# Authors:
-#   Ben O'Hara <bohara@gmail.com>
+PubkeyAcceptedKeyTypes=+ssh-dss
+
+# <fsync>
+Host fsync-server.rdu.redhat.com
+  IdentityFile ~/.ssh/id_dsa_fsync
+# </fsync>
 #
 
-# Global Settings
-ForwardAgent yes
-#VisualHostKey yes
-HashKnownHosts no
-#ConnectTimeout 2
+Host dt
+  ForwardX11 yes
+  Compression yes
+  HostName dredd.rdu.redhat.com
+  User bcrochet
+  ForwardAgent yes
 
-# My Hosts
-#Host hostname hostname.fqdn.com
-#    Hostname hostname.fqdn.com
+Host lawgiver
+  ForwardX11 yes
+  Compression yes
+  HostName lawgiver.rdu.redhat.com
+  User bcrochet
+  ForwardAgent yes
 
-# Default
-Host *
-    #User username
-    StrictHostKeyChecking ask
-    ServerAliveCountMax 6
-    ServerAliveInterval 30
-    KeepAlive yes
-    #ControlMaster auto
-    #ControlPath ~/.ssh/master/%r@%h:%p
-    #ControlPersist 8h
+Host foreman
+  ForwardX11 yes
+  Compression yes
+  HostName lawgiver.rdu.redhat.com
+  User bcrochet
+  ForwardAgent yes
+
+Host dts
+  ForwardX11 yes
+  Compression yes
+  HostName localhost
+  User bcrochet
+  Port 2200
+
+Host dth
+  ForwardX11 yes
+  Compression yes
+  HostName 10.232.1.17
+  User bcrochet
+
+Host git.fedorahosted.org
+  ForwardX11 no
+  Compression yes
+  User bcrochet
+  IdentityFile ~/.ssh/id_rsa_fedora
+
+Host mc
+  ForwardX11 yes
+  Compression yes
+  HostName minecraft.crochet.net
+  Port 2244
+  user bcrochet
+
+
+# Added by 'rhc domain create' on Fri Mar 30 22:42:25 EDT 2012
+
+Host *.rhcloud.com
+  IdentityFile ~/.ssh/other/libra_id_rsa
+  VerifyHostKeyDNS yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile ~/.ssh/other/libra_known_hosts
+  ServerAliveInterval 60
+
+Host *.itos.redhat.com
+  IdentityFile ~/.ssh/other/libra_id_rsa
+  VerifyHostKeyDNS yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile ~/.ssh/other/libra_known_hosts
+  ServerAliveInterval 60
+
+Host audubon
+  HostName audubonrealtyphp-crozart.rhcloud.com
+  User 9e2c6a0c169646f4944a176aba6c9864
+  IdentityFile ~/.ssh/other/libra_id_rsa
+  VerifyHostKeyDNS yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile ~/.ssh/other/libra_known_hosts
+
+Host openstack
+    ForwardX11 yes
+    Compression yes
+    HostName rhev-a8c-04.mpc.lab.eng.bos.redhat.com
+    AddressFamily inet
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    User root
+
+Host rhev-a8c-04.mpc.lab.eng.bos.redhat.com
+    ForwardX11 yes
+    Compression yes
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    User root
+
+Host openstack-controller
+    HostName openstack-controller.usersys.redhat.com
+    Compression yes
+    ForwardX11 yes
+    User root
+
+Host 10.8.*
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    IdentityFile ~/.ssh/foreman-ci
+
+host 10.16.18.*
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    IdentityFile ~/.ssh/foreman-ci
+
+Host hp-bl460cg7-01.rhts.eng.bos.redhat.com
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    User root
+
+Host 192.168.8.*
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ProxyCommand ssh root@hp-bl460cg7-01.rhts.eng.bos.redhat.com nc %h %p
+    User root
+    IdentityFile /tmp/ssh_key/hp-bl460cg7-01.rhts.eng.bos.redhat.com/root/.ssh/id_rsa
+
+Host rhev-i16c-07.mpc.lab.eng.bos.redhat.com
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    User root
+
+Host 192.168.7.*
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ProxyCommand ssh root@rhev-i16c-07.mpc.lab.eng.bos.redhat.com nc %h %p
+    User root
+    IdentityFile /tmp/ssh_key/rhev-i16c-07.mpc.lab.eng.bos.redhat.com/root/.ssh/id_rsa
+
+Host 192.168.121.*
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+
+Host review.openstack.org
+    IdentityFile /home/bcrochet/.ssh/other/id_openstack_rsa
+
+Host test01
+    HostName bcrochet-test01.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host test02
+    HostName bcrochet-test02.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host test03
+    HostName bcrochet-test03.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host bcrochet-test01
+    HostName bcrochet-test01.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host bcrochet-test01.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host bcrochet-test02
+    HostName bcrochet-test02.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host bcrochet-test02.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host bcrochet-test03
+    HostName bcrochet-test03.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host bcrochet-test03.rdu.redhat.com
+    User root
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host 38.145.32.*
+    User centos
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    ForwardX11 yes
+    ForwardAgent yes
+    IdentityFile /home/bcrochet/Downloads/default.pem
 
