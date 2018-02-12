@@ -21,7 +21,6 @@ export GOPATH=$HOME/go
 # Customize to your needs...
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $HOME/.rvm/bin # Add RVM to PATH for scripting
   /opt/sublime_text_3
   $HOME/.git-aliae/bin
   $HOME/android/sdk/{tools,platform-tools}
