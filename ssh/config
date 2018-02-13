@@ -218,3 +218,25 @@ Host 38.145.32.*
     ForwardAgent yes
     IdentityFile /home/bcrochet/Downloads/default.pem
 
+PubkeyAcceptedKeyTypes=+ssh-dss
+
+Host router
+    HostName router.lan
+    User root
+
+Host raspi
+    HostName raspi.lan
+    User pi
+
+Host raspi2
+    HostName raspi2.lan
+    User pi
+
+Host hassio
+    HostName hassio.local
+    User root
+    IdentitiesOnly yes
+    ForwardAgent yes
+    ForwardX11 yes
+
+
